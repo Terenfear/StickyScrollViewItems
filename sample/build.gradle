@@ -1,8 +1,5 @@
 apply plugin: 'android'
 
-repositories {
-    mavenCentral()
-}
 dependencies {
     compile project(':library')
     compile 'com.android.support:support-v4:18.0.0'
@@ -10,7 +7,6 @@ dependencies {
 
 android {
     compileSdkVersion 18
-    buildToolsVersion '18.0.1'
 
     sourceSets {
         main {
