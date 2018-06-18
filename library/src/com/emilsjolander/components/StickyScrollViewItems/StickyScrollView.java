@@ -202,7 +202,7 @@ public class StickyScrollView extends ScrollView {
 	@Override
 	protected void dispatchDraw(Canvas canvas) {
 		super.dispatchDraw(canvas);
-		if(currentlyStickingView != null){
+		if(currentlyStickingView != null && currentlyStickingView.getVisibility() == View.VISIBLE){
 			canvas.save();
 			canvas.translate(getPaddingLeft() + stickyViewLeftOffset, getScrollY() + stickyViewTopOffset + (clippingToPadding ? getPaddingTop() : 0));
 
