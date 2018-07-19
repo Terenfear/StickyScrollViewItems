@@ -1,7 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 19
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
 
     sourceSets {
         main {
@@ -10,6 +16,10 @@ android {
             res.srcDirs = ['res']
         }
     }
+}
+
+dependencies {
+    implementation "com.android.support:support-core-ui:${rootProject.ext.supportVersion}"
 }
 
 // TODO: Pointing to PR https://github.com/chrisbanes/gradle-mvn-push/pull/35 - Not Tested

@@ -1,12 +1,13 @@
-apply plugin: 'android'
-
-dependencies {
-    compile project(':library')
-    compile 'com.android.support:support-v4:18.0.0'
-}
+apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
 
     sourceSets {
         main {
@@ -15,4 +16,8 @@ android {
             res.srcDirs = ['res']
         }
     }
+}
+
+dependencies {
+    implementation project(':library')
 }

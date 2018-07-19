@@ -7,19 +7,19 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
-import android.widget.ScrollView;
 
 /**
  * 
  * @author Emil Sj�lander - sjolander.emil@gmail.com
  *
  */
-public class StickyScrollView extends ScrollView {
+public class StickyScrollView extends NestedScrollView {
 
 	/**
 	 * Tag for views that should stick and have constant drawing. e.g. TextViews, ImageViews etc
